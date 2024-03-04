@@ -1,0 +1,15 @@
+syntax = "proto3";
+package like_program;
+
+message LikeRequest {
+    int32 number = 1;
+}
+
+message LikeResponse {
+    int32 number = 1;
+}
+
+service LikeProgram {
+    rpc Like (LikeRequest) returns (LikeResponse);
+    rpc Dislike (LikeRequest) returns (LikeResponse);
+}
